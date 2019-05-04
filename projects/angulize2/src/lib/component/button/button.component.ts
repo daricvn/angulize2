@@ -17,7 +17,7 @@ export class ButtonComponent implements OnInit, OnChanges {
   @ViewChild("btn") btnRef: ElementRef;
   private classList: string[]=[];
   private styleList: any=[];
-  rippleTheme: string;
+  rippleTheme: string='black';
   constructor(ref: ElementRef) { 
     ref.nativeElement.className="";
   }

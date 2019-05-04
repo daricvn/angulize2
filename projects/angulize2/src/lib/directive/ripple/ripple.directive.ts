@@ -7,7 +7,7 @@ export class RippleDirective implements OnInit, OnDestroy{
   private _interval=0.12;
   private _hoverOpacity=0.4;
   private _maxOpacity=0.4;
-  private _maxScale=1.8;
+  private _maxScale=2;
   private _scaleDuration=0.3;
   private _opacityDuration=0.2;
   private _baseOpacity=0;

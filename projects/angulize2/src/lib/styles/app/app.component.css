@@ -2939,3 +2939,9 @@ i.right{
 .success .ripple,.primary .ripple,.error .ripple,.warning .ripple{
     background-color: var(--theme-ripple-color) !important;
 }
+.btn.success:not([disabled]):hover::before,
+.btn.primary:not([disabled]):hover::before,
+.btn.error:not([disabled]):hover::before,
+.btn.warning:not([disabled]):hover::before{
+    background-color: var(--theme-text-color);
+}
