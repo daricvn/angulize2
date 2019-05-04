@@ -129,7 +129,47 @@
           }
         }
       }
+    },
+    "Angulize2": {
+      "root": "projects/angulize2",
+      "sourceRoot": "projects/angulize2/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/angulize2/tsconfig.lib.json",
+            "project": "projects/angulize2/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angulize2/src/test.ts",
+            "tsConfig": "projects/angulize2/tsconfig.spec.json",
+            "karmaConfig": "projects/angulize2/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angulize2/tsconfig.lib.json",
+              "projects/angulize2/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
-  "defaultProject": "Angulize"
+  "defaultProject": "Angulize",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

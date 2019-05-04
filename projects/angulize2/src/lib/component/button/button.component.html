@@ -1,0 +1,4 @@
+<button m-ripple [ripple-theme]="rippleTheme" class="btn" [type]="type || 'button'" [ngClass]="class" #btn (click)="onMouseClick($event)"
+  [disabled]="disabled!=null || disabled==true">
+  <ng-content></ng-content>
+</button>

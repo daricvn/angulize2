@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "angulize2": [
+        "dist/angulize2"
+      ],
+      "angulize2/*": [
+        "dist/angulize2/*"
+      ]
+    }
   }
 }

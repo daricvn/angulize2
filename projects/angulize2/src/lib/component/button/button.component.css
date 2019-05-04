@@ -1,0 +1,49 @@
+.btn:before{
+    transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+    content:' ';
+    position: absolute;
+    opacity: 0.133;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+.btn:not([disabled]):hover::before{
+    background: white;
+}
+.btn{
+    padding: 0 16px;
+    align-items: center;
+    display: inline-flex;
+    border-radius: 2px;
+    height: 36px;
+    flex: 0 0 auto;
+    font-size: 14px;
+    justify-content: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+    position: relative;
+    vertical-align: middle;
+    user-select: none;
+    outline: none;
+    border: none;
+    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+    will-change: box-shadow;
+}
+.light{
+    color: white;
+}
+.btn:not([disabled]):not(.flat).active{
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.24), 0px 5px 8px 0px rgba(0,0,0,0.18), 0px 2px 16px 0px rgba(0,0,0,0.14);
+}
+.btn[disabled]{
+    color: rgb(128,128,128);
+    background-color:rgb(218,218,218) !important;
+    box-shadow: none;
+}
+.btn.flat{
+    box-shadow: none;
+    background-color: transparent;
+}
