@@ -1,11 +1,33 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <m-app>
-  <m-row>
-    <div class="col sm12">Hello</div>
-    <div class="col sm6">Hello</div>
-    <div class="col sm6">Hello</div>
+  <m-row class="flex-box" col-class="pa-1">
+    <m-col sm12>
+      <m-card m-hover m-ripple ripple-theme="black" class="filled text--center">
+        <m-card-content class="blue white-text">
+          Text
+        </m-card-content>
+      </m-card>
+    </m-col>
+    <m-col sm12 md6 lg4>
+        <m-card m-hover class="filled text--center">
+            <m-card-content class="blue white-text">
+              Text
+            </m-card-content>
+          </m-card>
+    </m-col>
+    <m-col sm12 md6 lg4 offset-lg4>
+        <m-card m-hover class="filled text--center">
+            <m-card-content class="blue white-text">
+              Text
+            </m-card-content>
+          </m-card>
+    </m-col>
+    
   </m-row>
-  <m-button>Test button</m-button>
+  <m-button success floating><i class="material-icons">add</i></m-button>
+  <m-button disabled floating><i class="material-icons">done</i></m-button>
+  <m-divider></m-divider>
+  <m-button class="outline success small">Hello world</m-button>
   <m-progress-circular size="100" width="1"></m-progress-circular>
-  <m-progress-bar intermediate color="blue" height="8"></m-progress-bar>
+  <m-progress-bar indeterminate color="blue" height="8"></m-progress-bar>
 </m-app>

@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RowComponent } from './row.component';
+import { ColComponent } from './col/col.component';
 
 @NgModule({
-  declarations: [RowComponent],
+  declarations: [RowComponent, ColComponent],
   imports: [
     CommonModule
   ],
-  exports:[ RowComponent ]
+  exports:[ RowComponent,ColComponent ]
 })
-export class RowModule { }
+export class FlexModule { }

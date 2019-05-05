@@ -65,7 +65,7 @@ export class RippleDirective implements OnInit, OnDestroy{
     let tx=ripple.x-(size)/2;
     let ty=(ripple.y-(size)/2);
     ripple.el.style.opacity="0";
-    ripple.el.style.transform="scale(0,0)";
+    ripple.el.style.transform="scale("+this._baseScale+","+this._baseScale+")";
     ripple.el.style.top=ty+"px";
     ripple.el.style.left=tx+"px";
     ripple.size=size;

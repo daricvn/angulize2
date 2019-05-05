@@ -18,8 +18,10 @@ export class ButtonComponent implements OnInit, OnChanges {
   private classList: string[]=[];
   private styleList: any=[];
   rippleTheme: string='black';
+  private ref: ElementRef;
   constructor(ref: ElementRef) { 
     ref.nativeElement.className="";
+    this.ref=ref;
   }
 
   ngOnInit() {
@@ -27,6 +29,7 @@ export class ButtonComponent implements OnInit, OnChanges {
     this.el.addEventListener("mousedown",this.onMouseDown,false);
     this.el.addEventListener("mouseup",this.onMouseUp,false);
     this.renderStyle();
+    this.renderAttrClass(["floating","flat","outline","success","primary","error","warning","large","small","very-large"]);
     setTimeout(()=>{
       if (this.el.className.indexOf("flat")>=0){
         this.rippleTheme='black';
@@ -38,6 +41,15 @@ export class ButtonComponent implements OnInit, OnChanges {
     if (this.el && this.el.className.indexOf("flat")>=0){
       this.rippleTheme='black';
     }
+  }
+
+  renderAttrClass(keys: string[]){
+    keys.forEach(word=>{
+      if (this.ref.nativeElement.hasAttribute(word)){
+        this.el.className+=" "+word;
+      }
+    })
+    this.el.className=this.el.className.trim();
   }
 
   renderStyle(){
