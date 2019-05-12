@@ -1,0 +1,8 @@
+.card .__card-placeholder{
+    padding: 1px;
+    position: relative;
+    color: inherit;
+    background-color: inherit;
+    display: block;
+    text-align: left;
+}

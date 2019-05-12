@@ -163,6 +163,7 @@ html{
   
   .pink.lighten-4 {
     background-color: #f8bbd0 !important;
+    --theme-color: #f8bbd0;
   }
   
   .pink-text.text-lighten-4 {
@@ -171,6 +172,7 @@ html{
   
   .pink.lighten-3 {
     background-color: #f48fb1 !important;
+    --theme-color: #f48fb1;
   }
   
   .pink-text.text-lighten-3 {
@@ -179,6 +181,7 @@ html{
   
   .pink.lighten-2 {
     background-color: #f06292 !important;
+    --theme-color: #f06292;
   }
   
   .pink-text.text-lighten-2 {
@@ -187,6 +190,7 @@ html{
   
   .pink.lighten-1 {
     background-color: #ec407a !important;
+    --theme-color: #ec407a;
   }
   
   .pink-text.text-lighten-1 {
@@ -195,6 +199,7 @@ html{
   
   .pink.darken-1 {
     background-color: #d81b60 !important;
+    --theme-color: #d81b60;
   }
   
   .pink-text.text-darken-1 {
@@ -203,6 +208,7 @@ html{
   
   .pink.darken-2 {
     background-color: #c2185b !important;
+    --theme-color: #c2185b;
   }
   
   .pink-text.text-darken-2 {
@@ -211,6 +217,7 @@ html{
   
   .pink.darken-3 {
     background-color: #ad1457 !important;
+    --theme-color: #ad1457;
   }
   
   .pink-text.text-darken-3 {
@@ -219,6 +226,7 @@ html{
   
   .pink.darken-4 {
     background-color: #880e4f !important;
+    --theme-color: #880e4f;
   }
   
   .pink-text.text-darken-4 {
@@ -227,6 +235,7 @@ html{
   
   .pink.accent-1 {
     background-color: #ff80ab !important;
+    --theme-color: #ff80ab;
   }
   
   .pink-text.text-accent-1 {
@@ -235,6 +244,7 @@ html{
   
   .pink.accent-2 {
     background-color: #ff4081 !important;
+    --theme-color: #ff4081;
   }
   
   .pink-text.text-accent-2 {
@@ -243,6 +253,7 @@ html{
   
   .pink.accent-3 {
     background-color: #f50057 !important;
+    --theme-color: #f50057;
   }
   
   .pink-text.text-accent-3 {
@@ -2586,7 +2597,7 @@ i.right{
 .ripple__container{
     color: inherit;
     border-radius: inherit;
-    z-index: 0;
+    z-index: 10000;
     position: absolute;
     width: 100%;
     height: 100%;

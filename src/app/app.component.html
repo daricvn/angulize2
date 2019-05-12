@@ -2,16 +2,35 @@
 <m-app>
   <m-row class="flex-box" col-class="pa-1">
     <m-col sm12>
-      <m-card m-hover m-ripple ripple-theme="black" class="filled text--center">
-        <m-card-content class="blue white-text">
+      <m-card m-hover class="filled text--center">
+        <m-card-content>
           Text
+          <m-badge class="red round">new text</m-badge>
         </m-card-content>
+        <m-card-action>
+          <m-button flat class="orange-text">This is a link</m-button>
+        </m-card-action>
       </m-card>
     </m-col>
     <m-col sm12 md6 lg4>
         <m-card m-hover class="filled text--center">
-            <m-card-content class="blue white-text">
+            <m-card-content>
               Text
+              <m-chip m-ripple closeable selectable>
+                <span avatar class="orange">T</span>
+                Chip
+              </m-chip>
+              <m-chip m-ripple closeable selectable disabled>
+                <span avatar class="orange">T</span>
+                Chip
+              </m-chip>
+              <m-chip>
+                <span avatar class="teal">C</span>
+                Chip 2
+              </m-chip>
+              <m-chip outline class="warning" selectable>
+                Chip 3
+              </m-chip>
             </m-card-content>
           </m-card>
     </m-col>
