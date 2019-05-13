@@ -1,0 +1,8 @@
+
+<div #avatarRef [ngClass]="{ '__chip-avatar': notEmptySlot}">
+  <ng-content select="[avatar]"></ng-content>
+</div>
+<ng-content></ng-content>
+<div class="__chip-close" (click)="onCloseClicked()" *ngIf="closeable!=null">
+  <i class="material-icons">close</i>
+</div>

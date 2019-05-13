@@ -11,7 +11,7 @@ export class CardContentComponent implements OnInit {
   // @Input("style") style: string;
   // @ViewChild("content") elRef: ElementRef;
   constructor(ref: ElementRef) { 
-    ref.nativeElement.className+=" card-content";
+    ref.nativeElement.className+=" __card-content";
     ref.nativeElement.style.display="block";
   }
 

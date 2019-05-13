@@ -1,0 +1,30 @@
+.badge{
+    display: inline-block;
+    font-size: 0.8rem;
+    color: white;
+    border-radius: 2px;
+    background-color: dodgerblue;
+    min-width: 4px;
+    padding: 0 7px;
+    line-height: 22px;
+    height: 22px;
+    box-sizing: border-box;
+}
+.badge.left{
+    margin-right: 12px;
+}
+
+.badge:not(.left){
+    margin-left: 12px;
+}
+
+.badge.circle{
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    padding: 0px;
+    border-radius: 50%;
+}
+.badge.round{
+    border-radius: 20px;
+}

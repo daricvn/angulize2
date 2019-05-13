@@ -7,14 +7,16 @@ import { CardModule } from './component/card/card.module';
 import { RippleModule } from './directive/ripple/ripple.module';
 import { HoverModule } from './directive/hover/hover.module';
 import { DividerModule } from './component/divider/divider.module';
+import { BadgeModule } from './component/badge/badge.module';
+import { ChipModule } from './component/chip/chip.module';
 
 @NgModule({
   declarations: [],
   imports: [
     AppModule, FlexModule, ButtonModule, ProgressModule, CardModule, RippleModule, HoverModule,
-    DividerModule
+    DividerModule, BadgeModule, ChipModule
   ],
   exports: [ AppModule,FlexModule, ButtonModule, ProgressModule, CardModule, RippleModule, HoverModule,
-  DividerModule]
+  DividerModule, BadgeModule, ChipModule]
 })
 export class Angulize2Module { }

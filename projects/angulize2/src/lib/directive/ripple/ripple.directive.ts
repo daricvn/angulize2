@@ -76,6 +76,7 @@ export class RippleDirective implements OnInit, OnDestroy{
   }
   @HostListener("mousedown",['$event'])
   onMouseDown(e: MouseEvent){
+    if (this.el.hasAttribute("disabled")) return;
     this.createContainer();
     this.mouseKeep=true;
     this.appendEffect(e.offsetX,e.offsetY,true);
