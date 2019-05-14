@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angulize';
+  loading : boolean=false;
+  doLoad(){
+    this.loading=true;
+    setTimeout(()=>{
+      this.loading=false;
+    },4000);
+  }
 }

@@ -1,4 +1,4 @@
-<div style="position: relative; display: inline-block;" [ngStyle]="{ width: actualSize, height: actualSize}">
+<div style="position: relative; display: flex;" [ngStyle]="{ width: actualSize, height: actualSize}">
   <svg class="circular" #svg>
     <circle class="path" [attr.cx]="radius" [attr.cy]="radius" r='20' fill="none" [attr.stroke-width]="width" stroke-miterlimit="10" />
   </svg>

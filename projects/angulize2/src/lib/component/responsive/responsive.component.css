@@ -1,0 +1,41 @@
+m-img{
+    display: flex;
+    flex: 1 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: inherit;
+    align-items: flex-start;
+}
+
+m-img span{
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+m-card-placeholder m-img .__ruler{
+    padding-bottom: 37%;
+}
+
+m-img .__ruler{
+    transition: padding-bottom 0.2s;
+    flex: 0 0 0;
+}
+
+m-img .__responsive-img{
+    transition: all 0.2s linear;
+}
+m-img .__responsive-img.__loading{
+    filter: blur(12px);
+    transform: scale(1.1);
+}
+
+m-img .__content{
+    display: flex;
+    flex: 1 0 auto;
+}
