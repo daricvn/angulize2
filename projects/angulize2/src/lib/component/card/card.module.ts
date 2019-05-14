@@ -10,6 +10,6 @@ import { CardPlaceholderComponent } from '../Card/card-placeholder/card-placehol
   imports: [
     CommonModule
   ],
-  exports:[ CardComponent, CardContentComponent,CardActionComponent]
+  exports:[ CardComponent, CardContentComponent,CardActionComponent, CardPlaceholderComponent]
 })
 export class CardModule { }

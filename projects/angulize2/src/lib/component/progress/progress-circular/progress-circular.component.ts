@@ -8,6 +8,7 @@ import { Component, OnInit, Input, ViewChild, ElementRef, OnChanges, AfterViewIn
 export class ProgressCircularComponent implements OnInit, AfterViewInit, OnChanges {
   @Input("size") size: number | string=100;
   @Input("width") width: number | string=4;
+  @Input("color") color: string;
   @ViewChild("svg") ref: ElementRef;
   private el: any;
   constructor() { }
@@ -22,8 +23,12 @@ export class ProgressCircularComponent implements OnInit, AfterViewInit, OnChang
     this.renderSvgViewBox();
   }
   renderSvgViewBox(){
-    if (this.el)
+    if (this.el){
       this.el.setAttribute("viewBox",this.radius/2+" "+this.radius/2+" "+this.radius+" "+this.radius);
+      if (this.color){
+        this.el.querySelector("circle").style.stroke=this.color;
+      }
+    }
   }
 
   get radius(){

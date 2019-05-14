@@ -12,6 +12,10 @@
 .btn:not([disabled]):hover::before{
     background-color: black;
 }
+.btn[disabled].outline{
+    border-color: rgb(138,138,138) !important;
+    color: rgb(142,142,142) !important;
+}
 .btn{
     padding: 0 16px;
     align-items: center;

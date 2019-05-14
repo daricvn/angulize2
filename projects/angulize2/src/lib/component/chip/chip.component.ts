@@ -34,8 +34,18 @@ export class ChipComponent implements OnInit {
       return;
     if (!this.el.hasAttribute("selectable"))
       return;
-    if (this.el.hasAttribute("selected"))
+    if (this.selected)
+      this.selected=false;
+    else this.selected=true;
+  }
+
+  get selected(){
+    return this.el.hasAttribute("selected");
+  }
+  set selected(value:boolean){
+    if (value && !this.selected)
+      this.el.setAttribute("selected","");
+    else if (this.selected)
       this.el.removeAttribute("selected");
-    else this.el.setAttribute("selected","");
   }
 }

@@ -1,4 +1,9 @@
 <button m-ripple [ripple-theme]="rippleTheme" class="btn" [type]="type || 'button'" [ngClass]="class" #btn (click)="onMouseClick($event)"
-  [disabled]="disabled!=null || disabled==true">
-  <ng-content></ng-content>
+  [disabled]="disabled!=null || disabled==true || (loading!=null && loading!=false) || loading==true">
+  <div *ngIf="(loading!=null && loading!=false) || loading==true" style="display:flex; align-items: center; position: absolute">
+    <m-progress-circular size="20" color="rgb(138,138,138)"></m-progress-circular>
+  </div>
+  <div [ngStyle]="{ 'visibility': ((loading!=null && loading!=false) || loading==true)?'hidden':'visible' }" style="display: flex">
+    <ng-content></ng-content>
+  </div>
 </button>

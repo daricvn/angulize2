@@ -9,14 +9,15 @@ import { HoverModule } from './directive/hover/hover.module';
 import { DividerModule } from './component/divider/divider.module';
 import { BadgeModule } from './component/badge/badge.module';
 import { ChipModule } from './component/chip/chip.module';
+import { ResponsiveModule } from './component/responsive/responsive.module';
 
 @NgModule({
   declarations: [],
   imports: [
     AppModule, FlexModule, ButtonModule, ProgressModule, CardModule, RippleModule, HoverModule,
-    DividerModule, BadgeModule, ChipModule
+    DividerModule, BadgeModule, ChipModule, ResponsiveModule
   ],
   exports: [ AppModule,FlexModule, ButtonModule, ProgressModule, CardModule, RippleModule, HoverModule,
-  DividerModule, BadgeModule, ChipModule]
+  DividerModule, BadgeModule, ChipModule, ResponsiveModule]
 })
 export class Angulize2Module { }

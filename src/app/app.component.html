@@ -2,7 +2,10 @@
 <m-app>
   <m-row class="flex-box" col-class="pa-1">
     <m-col sm12>
-      <m-card m-hover class="filled text--center">
+      <m-card m-hover class="filled text--center" width="300">
+        <m-card-placeholder>
+          <m-img m-ripple src="https://picsum.photos/2000/1200?image=15" lazy-src="https://picsum.photos/5/3?image=15"></m-img>
+        </m-card-placeholder>
         <m-card-content>
           Text
           <m-badge class="red round">new text</m-badge>
@@ -47,6 +50,7 @@
   <m-button disabled floating><i class="material-icons">done</i></m-button>
   <m-divider></m-divider>
   <m-button class="outline success small">Hello world</m-button>
+  <m-button class="outline success small" [loading]="true" (click)="doLoad()">Hello world</m-button>
   <m-progress-circular size="100" width="1"></m-progress-circular>
   <m-progress-bar indeterminate color="blue" height="8"></m-progress-bar>
 </m-app>

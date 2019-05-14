@@ -12,6 +12,7 @@ export class ButtonComponent implements OnInit, OnChanges {
   @Input("ngStyle") ngStyle: object;
   @Input("ngClass") ngClass: any;
   @Input("disabled") disabled: boolean | string;
+  @Input("loading") loading: boolean | string;
   @Output("click") click: EventEmitter<any>= new EventEmitter<any>();
   private el: any;
   @ViewChild("btn") btnRef: ElementRef;
