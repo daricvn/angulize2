@@ -6,6 +6,7 @@ m-interaction{
     padding: 4px 2px;
     --outline-color: white;
     --back-color: #4CAF50;
+    --theme-color: transparent !important;
     user-select: none;
 }
 m-interaction:not([disabled]){
@@ -88,7 +89,7 @@ m-interaction > div {
     transition: color 0.2s linear;
     color:black;
 }
-m-interaction[dark] > div{
+m-interaction[dark] > div, m-interaction.dark > div{
     color:white;
 }
 m-interaction[active] > div{
@@ -100,4 +101,29 @@ m-interaction[disabled]{
 }
 m-interaction[disabled] > div{
     color: rgb(118,118,118) !important;
+}
+
+m-interaction.primary{
+    --outline-color: white;
+    --back-color: #2196F3;
+}
+m-interaction.warning{
+    --outline-color: white;
+    --back-color: #fb8c00;
+}
+m-interaction.error{
+    --outline-color: white;
+    --back-color: red;
+}
+m-interaction[dark].primary, m-interaction.dark.primary {
+    --outline-color: white;
+    --back-color: #90caf9;
+}
+m-interaction[dark].warning,m-interaction.dark.warning{
+    --outline-color: white;
+    --back-color: #ffcc80;
+}
+m-interaction[dark].error,m-interaction.dark.error{
+    --outline-color: white;
+    --back-color: #ef9a9a ;
 }
