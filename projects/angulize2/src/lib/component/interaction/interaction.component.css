@@ -1,0 +1,103 @@
+m-interaction{
+    flex: 1;
+    display: flex;
+    display: -webkit-flex;
+    width: auto;
+    padding: 4px 2px;
+    --outline-color: white;
+    --back-color: #4CAF50;
+    user-select: none;
+}
+m-interaction:not([disabled]){
+    cursor: pointer;
+}
+m-interaction[active]:not([undoable]){
+    cursor: default;
+}
+m-interaction > span {
+    flex-basis: 5px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 0px;
+    transition: 0.1s linear;
+}
+m-interaction[active] > span{
+    width: 30px;
+}
+m-interaction > span > i {
+    position: relative;
+    display:block;
+    height:30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: var(--back-color);
+    border: 2px solid transparent;
+    transition: 0.2s all cubic-bezier(.01,.18,.53,1.33);
+    transform: scale(0);
+}
+m-interaction[active] > span > i{
+    transform: scale(1);
+}
+m-interaction[outline] > span > i{
+    background-color: var(--outline-color);
+    border: 2px solid var(--back-color);
+}
+m-interaction > span > i::before{
+    content: ' ';
+    border-left: 3px transparent;
+    border-top: 3px transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    transform: rotateZ(37deg);
+    top: 18px;
+    left: 12px;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    transition: all 0.3s linear;
+    opacity: 0;
+}
+
+m-interaction[active] > span > i::before{
+    border-left: 3px transparent;
+    border-top: 3px transparent;
+    border-right: 3px solid var(--outline-color);
+    border-bottom: 3px solid var(--outline-color);
+    top: 3px;
+    left: 9px;
+    height: 17px;
+    width: 8px;
+    opacity: 1;
+    transition: opacity 0.1s 0.2s, border 0.2s 0.2s, background-color .15s 0.2s, width .25s .3s, height .15s .3s, top .15s .3s, left .25s .3s;
+}
+
+m-interaction[outline] > span > i::before{
+    border-right: 3px solid var(--back-color);
+    border-bottom: 3px solid var(--back-color);
+}
+
+m-interaction > div {
+    flex-basis: auto;
+    padding-left: 15px;
+    vertical-align: middle;
+    justify-content: center;
+    line-height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: color 0.2s linear;
+    color:black;
+}
+m-interaction[dark] > div{
+    color:white;
+}
+m-interaction[active] > div{
+    color: var(--back-color) !important;
+}
+m-interaction[disabled]{
+    --outline-color: white;
+    --back-color: rgb(128,128,128);
+}
+m-interaction[disabled] > div{
+    color: rgb(118,118,118) !important;
+}
