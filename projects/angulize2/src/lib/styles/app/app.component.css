@@ -2626,7 +2626,7 @@ i.right{
     --theme-ripple-color: #e8f5e9;
     --theme-text-color: white;
 }
-.outline.success:not(.dark){
+.outline.success:not(.dark),[outline].success:not(.dark){
   --theme-ripple-color: #388e3c ;
 
 }
@@ -2635,7 +2635,7 @@ i.right{
     --theme-ripple-color: #e3f2fd ;
     --theme-text-color: white;
 }
-.outline.primary:not(.dark){
+.outline.primary:not(.dark),[outline].primary:not(.dark){
   --theme-ripple-color: #1976d2;
 }
 .error{
@@ -2643,7 +2643,7 @@ i.right{
     --theme-ripple-color: #ffebee;
     --theme-text-color: white;
 }
-.outline.error:not(.dark){
+.outline.error:not(.dark),[outline].error:not(.dark){
   --theme-ripple-color: #d32f2f;
 }
 .warning{
@@ -2651,7 +2651,7 @@ i.right{
     --theme-ripple-color: #fff3e0 ;
     --theme-text-color: white;
 }
-.outline.warning:not(.dark){
+.outline.warning:not(.dark),[outline].warning:not(.dark){
   --theme-ripple-color: #f57c00 ;
 }
 .success,.primary,.error,.warning{

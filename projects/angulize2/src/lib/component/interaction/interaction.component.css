@@ -1,13 +1,18 @@
 m-interaction{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    --outline-color: white;
+    --back-color: #4CAF50;
+    margin-bottom: 2px;
+}
+m-interaction > div{
     flex: 1;
     display: flex;
     display: -webkit-flex;
     width: auto;
     padding: 4px 2px;
-    --outline-color: white;
-    --back-color: #4CAF50;
     user-select: none;
-    margin-bottom: 2px;
 }
 m-interaction[dark], m-interaction.dark{
     --outline-color: rgb(63,63,63);
@@ -16,7 +21,7 @@ m-interaction[dark], m-interaction.dark{
 m-interaction{
     --theme-color: transparent !important;
 }
-m-interaction[filled], m-interaction.filled{
+m-interaction[filled] > div, m-interaction.filled > div{
     transition: all 0.1s ease;
 }
 m-interaction:not([disabled]){
@@ -25,7 +30,7 @@ m-interaction:not([disabled]){
 m-interaction[active]:not([undoable]){
     cursor: default;
 }
-m-interaction > span {
+m-interaction > div > span {
     flex-basis: 5px;
     justify-content: center;
     align-content: center;
@@ -33,10 +38,10 @@ m-interaction > span {
     width: 0px;
     transition: 0.1s linear;
 }
-m-interaction[active] > span{
+m-interaction[active] > div > span{
     width: 30px;
 }
-m-interaction > span > i {
+m-interaction > div > span > i {
     position: relative;
     display:block;
     height:30px;
@@ -47,14 +52,14 @@ m-interaction > span > i {
     transition: 0.2s all cubic-bezier(.01,.18,.53,1.33);
     transform: scale(0);
 }
-m-interaction[active] > span > i{
+m-interaction[active] > div > span > i{
     transform: scale(1);
 }
-m-interaction[outline] > span > i{
+m-interaction[outline] > div > span > i{
     background-color: var(--outline-color);
     border: 2px solid var(--back-color);
 }
-m-interaction > span > i::before{
+m-interaction > div > span > i::before{
     content: ' ';
     border-left: 3px transparent;
     border-top: 3px transparent;
@@ -70,7 +75,7 @@ m-interaction > span > i::before{
     opacity: 0;
 }
 
-m-interaction[active] > span > i::before{
+m-interaction[active] > div > span > i::before{
     border-left: 3px transparent;
     border-top: 3px transparent;
     border-right: 3px solid var(--outline-color);
@@ -83,12 +88,12 @@ m-interaction[active] > span > i::before{
     transition: opacity 0.1s 0.2s, border 0.2s 0.2s, background-color .15s 0.2s, width .25s .3s, height .15s .3s, top .15s .3s, left .25s .3s;
 }
 
-m-interaction[outline] > span > i::before{
+m-interaction[outline] > div > span > i::before{
     border-right: 3px solid var(--back-color);
     border-bottom: 3px solid var(--back-color);
 }
 
-m-interaction > div {
+m-interaction > div > div {
     flex-basis: auto;
     padding-left: 15px;
     vertical-align: middle;
@@ -99,17 +104,17 @@ m-interaction > div {
     transition: color 0.2s linear;
     color:black;
 }
-m-interaction[dark] > div, m-interaction.dark > div{
+m-interaction[dark] > div > div, m-interaction.dark > div > div{
     color:white;
 }
-m-interaction[active] > div{
+m-interaction[active] > div > div{
     color: var(--back-color) !important;
 }
 m-interaction[disabled]{
     --outline-color: white;
     --back-color: rgb(158,158,158);
 }
-m-interaction[disabled] > div{
+m-interaction[disabled] > div > div{
     color: rgb(118,118,118) !important;
 }
 
@@ -121,6 +126,9 @@ m-interaction[active][filled],m-interaction[active].filled{
 }
 m-interaction[rounded], m-interaction.rounded{
     border-radius: 23px !important;
+}
+m-interaction[active][rounded], m-interaction[active].rounded{
+    padding-left: 8px;
 }
 m-interaction[active][dark][filled],m-interaction[active][dark].filled,
 m-interaction[active].dark[filled],m-interaction[active].dark.filled
@@ -154,7 +162,7 @@ m-interaction[active][filled][dark].error,m-interaction[active][dark].filled.err
 {
     --theme-color: #ff5252  !important;
 }
-m-interaction[active].filled > div,m-interaction[filled][active] > div
+m-interaction[active].filled > div > div,m-interaction[filled][active] > div > div
 {
     color: white !important;
 }
