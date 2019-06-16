@@ -6,8 +6,18 @@ m-interaction{
     padding: 4px 2px;
     --outline-color: white;
     --back-color: #4CAF50;
-    --theme-color: transparent !important;
     user-select: none;
+    margin-bottom: 2px;
+}
+m-interaction[dark], m-interaction.dark{
+    --outline-color: rgb(63,63,63);
+    --back-color: #a5d6a7 ;
+}
+m-interaction{
+    --theme-color: transparent !important;
+}
+m-interaction[filled], m-interaction.filled{
+    transition: all 0.1s ease;
 }
 m-interaction:not([disabled]){
     cursor: pointer;
@@ -97,12 +107,62 @@ m-interaction[active] > div{
 }
 m-interaction[disabled]{
     --outline-color: white;
-    --back-color: rgb(128,128,128);
+    --back-color: rgb(158,158,158);
 }
 m-interaction[disabled] > div{
     color: rgb(118,118,118) !important;
 }
 
+m-interaction[active][filled],m-interaction[active].filled{
+    --theme-color: #4CAF50 !important;
+    background-color: var(--theme-color);
+    border-radius: 3px;
+    padding-left: 8px;
+}
+m-interaction[rounded], m-interaction.rounded{
+    border-radius: 23px !important;
+}
+m-interaction[active][dark][filled],m-interaction[active][dark].filled,
+m-interaction[active].dark[filled],m-interaction[active].dark.filled
+{
+    --theme-color: #a5d6a7 !important;
+}
+m-interaction[active][filled][disabled],m-interaction[active][disabled].filled{
+    --theme-color: rgb(158,158,158) !important;
+}
+m-interaction[active][filled].primary,m-interaction[active].filled.primary{
+    --theme-color: #2196F3 !important;
+}
+m-interaction[active][filled].warning,m-interaction[active].filled.warning{
+    --theme-color: #fb8c00 !important;
+}
+m-interaction[active][filled].error,m-interaction[active].filled.error{
+    --theme-color: red !important;
+}
+m-interaction[active][filled][dark].primary,m-interaction[active][dark].filled.primary,
+m-interaction[active][filled].dark.primary,m-interaction[active].dark.filled.primary
+{
+    --theme-color: #64b5f6  !important;
+}
+m-interaction[active][filled].dark.warning,m-interaction[active].dark.filled.warning,
+m-interaction[active][filled][dark].warning,m-interaction[active][dark].filled.warning
+{
+    --theme-color: #ffb74d !important;
+}
+m-interaction[active][filled].dark.error,m-interaction[active].dark.filled.error,
+m-interaction[active][filled][dark].error,m-interaction[active][dark].filled.error
+{
+    --theme-color: #ff5252  !important;
+}
+m-interaction[active].filled > div,m-interaction[filled][active] > div
+{
+    color: white !important;
+}
+m-interaction[active][dark].filled > div,m-interaction[dark][filled][active] > div,
+m-interaction[active].dark.filled > div,m-interaction.dark[filled][active] > div
+{
+    color: black !important;
+}
 m-interaction.primary{
     --outline-color: white;
     --back-color: #2196F3;
@@ -116,14 +176,14 @@ m-interaction.error{
     --back-color: red;
 }
 m-interaction[dark].primary, m-interaction.dark.primary {
-    --outline-color: white;
-    --back-color: #90caf9;
+    --outline-color: rgb(63,63,63);
+    --back-color: #64b5f6;
 }
 m-interaction[dark].warning,m-interaction.dark.warning{
-    --outline-color: white;
-    --back-color: #ffcc80;
+    --outline-color: rgb(63,63,63);
+    --back-color: #ffb74d;
 }
 m-interaction[dark].error,m-interaction.dark.error{
-    --outline-color: white;
-    --back-color: #ef9a9a ;
+    --outline-color: rgb(63,63,63);
+    --back-color: #ff5252 ;
 }
